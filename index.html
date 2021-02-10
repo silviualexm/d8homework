@@ -86,7 +86,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
 
     <hr />
 
-    <input type="button" value="Sort" onclick="bubblesort()" />
+    <input type="button" value="Sort" onclick="bubbleSort()" />
 
     <script>
       /* EXERCISE 5: 
@@ -103,6 +103,7 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
       
       newLi.innerText = newTask.value
       myTask.appendChild(newLi)
+      newTask.value = ""
      }
 
      
@@ -164,9 +165,11 @@ The have a list of tasks and can, at any time, add a new one, delete one or sort
           - Break the code into many function for semplicity 
           - Reuse the functions previously created
       */
-     let myTasks = document.querySelectorAll('li')
+     
       const bubbleSort = function(){
-         console.log(myTasks.sort())
+        let myTasks = document.querySelectorAll('li')
+        myTasks.sort()
+        console.log(myTasks)
      }
     </script>
   </body>
